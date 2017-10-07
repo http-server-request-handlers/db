@@ -1,0 +1,37 @@
+{
+  "name": "http-server-request-handlers-db",
+  "version": "0.1.0",
+  "description": "an http.Server request handler that attempts to re-initialize a db connection with app.setupDb",
+  "author": "dan entous",
+  "license": "MIT",
+  "main": "src",
+  "keywords": [
+    "http.Server request handler",
+    "http.Server request handler db"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/http-server-request-handlers/db.git"
+  },
+  "bugs": {
+    "url": "https://github.com/http-server-request-handlers/db/issues"
+  },
+  "homepage": "https://github.com/http-server-request-handlers/db#readme",
+  "scripts": {
+    "eslint": "eslint .",
+    "pre-commit": "echo 'pre-commit checks ...' && npm run eslint && npm test -- --cov"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run pre-commit"
+    }
+  },
+  "devDependencies": {
+    "eslint": "4.18.2",
+    "eslint-config-dan-nl": "0.1.3",
+    "ghooks": "2.0.2"
+  },
+  "dependencies": {
+    "custom-errors-database": "0.1.0"
+  }
+}
