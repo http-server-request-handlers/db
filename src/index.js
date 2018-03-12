@@ -65,9 +65,8 @@ function dbRequestHandler( req, res, next ) {
        * @returns {*}
        */
       function ( err ) {
-        console.error( err )
-
         if ( process.env.NODE_ENV !== 'development' ) {
+          console.error( err )
           err = new DatabaseError( err.code, 'please try again later ...' )
         }
 
