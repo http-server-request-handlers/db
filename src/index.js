@@ -77,7 +77,7 @@ function dbRequestHandler( req, res, next ) {
           error: err
         };
 
-        return next( app.db.error )
+        return next( err )
       }
     );
 }

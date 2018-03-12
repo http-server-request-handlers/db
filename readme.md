@@ -1,9 +1,9 @@
 # http-server-request-handlers-db
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![NSP Status][nsp-image]][nsp-url]
 
-an http.Server request handler that attempts to re-initialize a db connection with `app.setupDb`.
+an http.Server request handler that attempts to re-initialize a db connection with `app.setupDb`; it should be used in conjunction with the [mongoose-helpers-setup-db module](https://github.com/mongoose-helpers/setup-db).
 
-the initial intent of this module is to provide a way to re-initialize a mongoose connection, on an http request, if the connection threw an error on application startup or was lost after startup.
+the initial intent of this module is to provide a way to re-initialize a mongoose connection, on an http request, if the connection threw an error on application startup, or was lost after startup.
 
 ## table of contents
 * [notes](#notes)
