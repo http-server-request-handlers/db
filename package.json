@@ -1,6 +1,6 @@
 {
   "name": "http-server-request-handlers-db",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "an http.Server request handler that attempts to re-initialize a db connection with app.setupDb",
   "author": "dan entous",
   "license": "MIT",

@@ -32,7 +32,7 @@ function dbRequestHandler( req, res, next ) {
   var app = req.app
 
   if ( app.debug ) {
-    console.log( '[info]', new Date(), 'dbRequestHandler()' )
+    console.log( '[debug]', new Date().toGMTString(), 'dbRequestHandler()' )
   }
 
   if ( !app.db ) {
@@ -46,6 +46,16 @@ function dbRequestHandler( req, res, next ) {
   if ( typeof app.setupDb !== 'function' ) {
     return next()
   }
+
+  if ( typeof app.db._readyState !== 'undefined' && app.db._readyState !== 0 ) {
+    return next()
+  }
+
+  console.log( '[warn]', new Date().toGMTString(), 'attempting to reconnect to mongodb://%host:%port/%database'
+    .replace( '%host', app.db.host )
+    .replace( '%port', app.db.port )
+    .replace( '%database', app.db.name )
+  )
 
   app.setupDb()
     .then(

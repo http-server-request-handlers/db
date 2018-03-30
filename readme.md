@@ -14,7 +14,7 @@ the initial intent of this module is to provide a way to re-initialize a mongoos
 * [license](#license)
 
 ## notes
-* expects `req.app` to exist; e.g., in express it’s the `IncomingMessage`
+* expects `req.app` to exist
 * interacts with the following properties on the `app` if they exist
     * `app.debug` - when set to true, the request handler will `console` log an info statement
     * `app.db.error` - when not set, the request handler will not attempt to re-initialize the db connection
