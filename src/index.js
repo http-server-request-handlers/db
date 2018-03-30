@@ -2,6 +2,7 @@
 /* eslint no-invalid-this: off */
 /* eslint no-process-env: off */
 /* eslint no-param-reassign: off */
+/* eslint no-underscore-dangle: off */
 
 'use strict'
 
